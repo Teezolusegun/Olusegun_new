@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="display.css" />
+    <script src="display.js"></script>
+</head>
+<body>
+        <script type="text/javascript">
+            let container = new Array();
+            function includeName(){
+                container.push(document.getElementById('input').value);
+                document.getElementById('input').value='';
+                show()
+            }
+         function show(){
+             for(var i = 0; i<container.lenght; i++){
+                  container[i]              }
+        
+
+         document.getElementById('show').innerHTML=  container.join('<br>') ;
+         }
+         function deleteFromArray(){
+          container.splice(index_no, 1)
+          show()}   
+
+          var time = new Date().getHours();
+var greetings;
+if (time < 12){
+    greetings = "Good Morning"
+}else if (time < 18 && time > 12 ){
+    greetings = "Good Afternoon"
+}else {
+    greetings = "Good Evening"
+}
+         </script>
+
+
+<div class="container">
+        <div class="main">
+        <h2>
+            Type a name to display below
+        </h2>
+         <form>
+         
+         <input type='text' id='input'>
+         <input type='button' value='save' onclick='includeName()';>
+         </form>
+         <b class="note">Note: You need to type your full name with single space between</b>
+        </div>
+    </div>
+         <br/><br></br><hr>
+
+         <div class="main" id='show'></div>
+         
+</body>
+</html>
